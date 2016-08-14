@@ -1,47 +1,35 @@
 # Athliit Open Data
 
 ## Open Data Endpoint
-http://ridesociallondon.com/api/openactive/events - a feed of the event data from athliit.com
+http://athliit.com/api/openactive/events - a feed of the event data from athliit.com
 
 ## Standards
 The data is published to conform to [Openactive Realtime Paged Data Exchange 0.2.3](https://www.openactive.io/realtime-paged-data-exchange/0.2.3/).
 
 ## Issues, Questions and Comments
-Please raise any issues, questions or comments as a [new issue in this repository](https://github.com/britishcycling-oa/opendata/issues).
+Please raise any issues, questions or comments as a [new issue in this repository](https://github.com/athliit/opendata/issues).
 
 ## Data Fields
 
 | Data Field | Example Value | Description |
 |---|---|---|
-|"CalendarEventID" | 42831 | Internal ID of the session |
-|"EventType"| "Sky Ride" | Type of event, one of: "Sky Ride" (NGB organised); "Ride Social" (User Submitted) |
-|"Title"| "Sky Ride Birmingham" | Session title|
-|"StartDateTime"| "2014-07-20T11:00:00"| Start time of session|
-|"CityName"| "Birmingham" | City of ride, not related to location |
-|"Postcode"| "B13 8RD"| Postcode of meeting location |
-|"Location"| "Whitwell- Rutland Cycling" | Free text location, not an address, do not attempt to Geocode this field |
-|"SuitableFor"| "Anyone"| One of "Women and Children", "Women Only", "Adults 16+ only". Note that the "Age Restrictions" calculated field on the Go Sky Ride site is populated when this field is set to "Adults 16+ only" |
-|"Difficulty"| "Easygoing" | One of "Easygoing", "Steady" or "Challenging" |
-| "BikeSuitability" | "Mountain Bike;Road;Hybrid (road tyres);Hybrid (off road tyres);" | Semi-colon delimited list of bike types |
-| "Description" | "" | Full text description of the ride, with HTML tags stripped |
-| "GroupName" | "Lincoln Cycle Chimps" | Name of riding group, especially when related to Ride Social rides |
-| "Pace" | "Slow (below 8 mph)" | Pace of the ride |
-|"EstimatedDurationCyclingMins" | 60 | Minutes cycling |
-|"EstimatedDurationTotalMins" | 90 | Total minutes in session including cycling
-| "RideDistanceMiles" | 5 | Ride Distance |
-| "StartLatitude" | 52.45082082040742 | | 
-| "StartLongitude" | -1.8999221725943267 | | 
-| "Permitted" | 100000 | Maximum number or riders permitted to attend the session (100000 = unlimited) |
-| "BookedPreRide" | 78 | Number of riders booked before the ride started |
-| "Booked" | 78 | Number of riders booked total |
-| "Free" | 0 |  Free places remaining |
-| "Publish" | false | Ride is published on the public website. Value "false" should be considered as a deleted record. |
-| "Link" | "http://www.goskyride.com/Search/Details?eventid=42831" | URL of session on Sky Ride site.
-| "LastUpdated" | 19523983 | Record last updated timestamp |
+|"id" | 42831 | Internal ID of the event |
+|"name"| "Mikenta" | Self Explanatory |
+|"slug"| "mikenta" | Alias for page where event can be found |
+|"description"| " Very nice boxing and martial arts club "| Self Explanatory |
+|"url"| "http://athliit.com/mikenta/event/example" | Route for specific event |
+|"show_participants"| "true/false"| If the event should have a list that shows the participants |
+|"start"| "2016-10-20T17:22:49+0200" | YYYY-MM-DDThh:mm:ss+miliseconds |
+|"end"| "2016-10-20T17:46:40+0200" | -||- |
+|"last_ticket day"| "2016-10-16T03:34:24+0200" | -||- |
+| "ticket_types" | "Contains json of each ticket type the event has, each having obvious properties" | An object containing subobjects of all ticket types available |
+| "location" | "Contains json of location the event takes place at, with self explanatory properties" | An object containing info about the event location |
+| "image" | "http://athliit.app/images/events/925204ea9d3ca9aef7d959a4b59d38e0.jpg" | url of event image on server |
+| "page" | "Contains json of all information related the athliit club page that the event can be found on" | An object ontaining info about the club page the event resides in |
 
 
 ## Changelog
 
 | Date | Changes |
 |---|---|
-| 4/07/2016 | Initial version published |
+| 12/08/2016 | Initial version published |
