@@ -1,7 +1,7 @@
 # Athliit Open Data
 
 ## Open Data Endpoint
-http://athliit.com/api/openactive/events - a feed of the event data from athliit.com
+https://api.athliit.com/openactive/events - a feed of the event data from athliit.com
 
 ## Standards
 The data is published to conform to [Openactive Realtime Paged Data Exchange 0.2.3](https://www.openactive.io/realtime-paged-data-exchange/0.2.3/).
